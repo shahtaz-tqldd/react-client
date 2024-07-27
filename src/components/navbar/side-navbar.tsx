@@ -15,7 +15,7 @@ const SideNavbar = () => {
   };
   return (
     <div className="bg-black/90 h-screen py-5 px-4">
-      <Logo lg className="ml-4" />
+      <Logo />
       <div className="flb flex-col h-[86%] mt-12">
         <div className="w-full">
           {sideMenuItems.map(({ title, link, icon: Icon }, index) => (

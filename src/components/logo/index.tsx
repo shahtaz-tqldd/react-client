@@ -1,15 +1,11 @@
 import { Link } from "react-router-dom";
-const img = "";
+import logo from "../../assets/images/logo.png";
 
-const Logo = ({ lg = false, md = false, sm = false, className }) => {
+const Logo = () => {
   return (
-    <Link
-      to={"/"}
-      className={`${className} ${
-        lg ? "text-2xl" : md ? "text-xl" : sm ? "text-lg" : "text-xl"
-      }`}
-    >
-      {img ? <img src={img} className="" /> : <b> LOGO</b>}
+    <Link to={"/"} className="fl">
+      <img src={logo} className="h-12" />
+      <h3 className="text-2xl text-white uppercase font-medium">Phonex</h3>
     </Link>
   );
 };

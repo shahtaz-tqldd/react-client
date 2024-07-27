@@ -1,4 +1,11 @@
-import { LayoutDashboard, ListOrdered, User } from "lucide-react";
+import {
+  LayoutDashboard,
+  LayoutDashboardIcon,
+  ListOrdered,
+  Settings2,
+  User,
+  User2Icon,
+} from "lucide-react";
 
 export const sideMenuItems = [
   {
@@ -20,3 +27,34 @@ export const sideMenuItems = [
     icon: ListOrdered,
   },
 ];
+
+export const accountMenuLinks = [
+  {
+    id: 1,
+    title: "Profile",
+    link: "/profile",
+    icon: User2Icon,
+  },
+  {
+    id: 2,
+    title: "Settings",
+    link: "/settings",
+    icon: Settings2,
+  },
+  {
+    id: 3,
+    title: "Dashboard",
+    link: "/",
+    icon: LayoutDashboardIcon,
+  },
+];
+
+// demo data
+export const user = {
+  name: "Shahtaz Rahman",
+  role: "Admin",
+  email: "shahtaz67@gmail.com",
+  image: {
+    url: "https://mir-s3-cdn-cf.behance.net/project_modules/hd/d95c1f148207527.62d1246c25004.jpg",
+  },
+};
