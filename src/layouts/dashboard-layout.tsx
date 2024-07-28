@@ -1,30 +1,19 @@
-import {
-  ResizableHandle,
-  ResizablePanel,
-  ResizablePanelGroup,
-} from "../components/ui/resizable";
 import SideNavbar from "../components/navbar/side-navbar";
 import { Outlet } from "react-router-dom";
 import TopNavbar from "../components/navbar/top-navbar";
 
 const DashboardLayout = () => {
   return (
-    <div className="h-screen w-[100vw]">
-      <ResizablePanelGroup direction="horizontal">
-        <ResizablePanel
-          defaultSize={16}
-          className="min-w-[80px] max-w-[400px] text-white"
-        >
-          <SideNavbar />
-        </ResizablePanel>
-        <ResizableHandle />
-        <ResizablePanel defaultSize={84}>
-          <TopNavbar />
-          <div className="p-4">
-            <Outlet />
-          </div>
-        </ResizablePanel>
-      </ResizablePanelGroup>
+    <div className="h-screen flex flex-row">
+      <div className="w-[280px] fixed text-white">
+        <SideNavbar />
+      </div>
+      <div className="ml-[280px] flex-1">
+        <TopNavbar />
+        <div className="p-6">
+          <Outlet />
+        </div>
+      </div>
     </div>
   );
 };
